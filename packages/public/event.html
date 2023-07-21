@@ -10,7 +10,7 @@
     #svgBox {
       height: 100vh;
       width: 100vw;
-      background-color: antiquewhite;
+      background-color: #EEE;
     }
   </style>
   <body>
@@ -232,7 +232,7 @@
   fontSize: string = '14px',
   fontFamily: string = '黑体'
   @return number
- * 
+ *
 */
     let utilCanvas = null;
     const getTextWidth = (
@@ -292,7 +292,7 @@
           if (item.len != this.defaultBoxWidth) {
             this.oSvg.appendChild(
               this.creatBigCircle(
-                this.xMap.get(index + 1),
+                this.xMap.get(event + 1),
                 this.drawHeight / 2,
                 this.down,
                 item.child[0]
@@ -319,7 +319,7 @@
         arr.forEach((item, index) => {
           const len = getTextWidth(item.value) + this.defultLineWidth * level;
           item.len = getTextWidth(item.value) + this.defultLineWidth;
-          if (!index) {
+          if (!event) {
             this.tempLen = len;
           } else {
             if (len > this.tempLen) {
@@ -332,23 +332,23 @@
       }
 
       randerMonthBox() {
-        for (let index = 1; index <= this.data.length; index++) {
-          let w = this.kvArray.get(index);
-          let count = index;
+        for (let index = 1; event <= this.data.length; event++) {
+          let w = this.kvArray.get(event);
+          let count = event;
           let wcount = 0;
           while (count > 0) {
             wcount += this.kvArray.get(count);
             count--;
           }
           // 把每月的x坐标存起来
-          this.xMap.set(index, wcount - w);
+          this.xMap.set(event, wcount - w);
           this.oSvg.appendChild(
             this.createMonth(
               w,
               this.defaultBoxHeight,
               "dimgrey",
-              this.data[index - 1].label,
-              this.xMap.get(index),
+              this.data[event - 1].label,
+              this.xMap.get(event),
               this.drawHeight / 2
             )
           );
