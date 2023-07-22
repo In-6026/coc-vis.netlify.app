@@ -9,6 +9,7 @@
     "vite": "^4.4.6",
     "vue": "^3.3.4"
   },
+  "type": "module",
   "devDependencies": {
     "@algolia/client-search": "^4.19.1",
     "@gvis/time-line": "workspace:^0.0.0",

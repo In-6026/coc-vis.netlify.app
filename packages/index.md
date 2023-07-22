@@ -1,13 +1,13 @@
 ---
 layout: home
 hero:
-  name: "量子小组可视化案例集"
-  text: "一堆有意思的案例~"
+  name: " 量子小组可视化案例集 "
+  text: " 一堆有意思的案例 ~"
 ---
 
 <div class="w-80% m-auto">
 <h1 class="font-bold text-xl text-center cursor-pointer" @click="refresh">
-  每日新闻<span class="inline-block text-xl i-carbon-update-now"></span>
+  每日新闻 <span class="inline-block text-xl i-carbon-update-now"></span>
 </h1> 
 <ul class="flex w-80% m-auto flex-justify-center flex-wrap gap-10 mt-6">
   <NCard v-for="news in newsList" 
@@ -26,13 +26,14 @@ hero:
 <script setup>
 import {ref} from 'vue';
 import axios from 'axios';
-import { NButton,NDivider,NCard,NBackTop } from 'naive-ui';
+import pkg from 'naive-ui';
+const { NButton,NDivider,NCard,NBackTop } = pkg;
+
 function useNewsListReq(){
     const newsList = ref();
     function getNewsList(){
       axios.get('https://news.topurl.cn/api').then((data)=>{
         const _newsList = data.data.data.newsList;
-        console.log(`data-->`,_newsList);
         newsList.value = _newsList;
       });
     }
