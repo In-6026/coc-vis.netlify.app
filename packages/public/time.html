@@ -10,11 +10,12 @@
 <script src="./vendors/d3_7.8.5.js"></script>
 
 <body>
+	<svg class="w-100vw h-100vh"></svg>
 </body>
 <script>
-	const body = d3.select('body');
+	const body = d3.select('svg');
 	console.log(`body-->`, body);
-	const svg = d3.select('body').append('svg');
+	const svg = d3.select('svg');
 	svg.attr({
 		width: () => 1000,
 		height: () => 1000,
@@ -23,12 +24,11 @@
 		},
 	});
 	// 著容器
-
 	const g = svg.append('g');
 	g.attr("id","main");
 
 	const board = d3.path();
-	board.rect()
+	board.rect(0,0)
 	console.log(board);
 </script>
 

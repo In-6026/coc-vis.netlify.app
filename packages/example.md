@@ -1,0 +1,1 @@
+[auto-sidebar] beforeCreateSideBarItems
