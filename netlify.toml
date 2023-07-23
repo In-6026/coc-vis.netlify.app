@@ -17,5 +17,5 @@ base = "."
 publish = "dist/"
 
 # Default build command.
-command = "npx yarn &&  npx yarn docs:build"
+command = "npm i -g pnpm && pnpm i &&pnpm docs:build"
 
