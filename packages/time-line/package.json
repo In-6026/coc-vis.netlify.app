@@ -1,6 +1,6 @@
 {
   "name": "@gvis/time-line",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "a d3 timeline ",
   "keywords": [
     "timeline",

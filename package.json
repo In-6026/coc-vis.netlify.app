@@ -1,4 +1,5 @@
 {
+  "private": true,
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
@@ -12,7 +13,8 @@
   "type": "module",
   "devDependencies": {
     "@algolia/client-search": "^4.19.1",
-    "@gvis/time-line": "workspace:^0.0.0",
+    "@changesets/cli": "^2.26.2",
+    "@gvis/time-line": "workspace:^0.1.0",
     "@iconify-json/carbon": "^1.1.18",
     "@types/d3": "^7.4.0",
     "@unocss/preset-attributify": "^0.53.6",
