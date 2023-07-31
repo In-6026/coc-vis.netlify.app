@@ -1,7 +1,36 @@
 {
+  "name": "couriourc-graph-vis.github.io-main",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:dev": " vitepress dev",
+    "docs:build": " vitepress build",
+    "docs:preview": " vitepress preview"
+  },
+  "devDependencies": {
+    "@algolia/client-search": "^4.19.1",
+    "@types/d3": "^7.4.0",
+    "@types/node": "^20.4.2",
+    "@unocss/vite": "^0.53.5",
+    "lerna": "^7.1.4",
+    "search-insights": "2",
+    "typescript": "^5.1.6",
+    "vitepress": "1.0.0-beta.5"
+  },
+  "packageManager": "pnpm-workspace",
+  "packages": [
+    "packages/**"
+  ],
+  "dependencies": {
+    "@svgdotjs/svg.js": "^3.2.0",
+    "@vis/timeline": "workspace:^0.0.0",
+    "d3": "^7.8.5",
+    "gsap": "^3.12.2",
+    "unocss": "^0.53.5",
+    "vite": "^4.4.5",
+    "vue": "^3.3.4"
   }
 }

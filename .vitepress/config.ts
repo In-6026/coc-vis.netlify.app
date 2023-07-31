@@ -1,12 +1,18 @@
-import {defineConfig} from 'vitepress'
-import * as fs from 'fs' // https://vitepress.dev/reference/site-config
-import * as path from "path"
+import {defineConfig} from 'vitepress';
+import * as fs from 'fs'; // https://vitepress.dev/reference/site-config
+import * as path from "path";
+import ViteConfig from "./vite.config";
+import Unocss from "@unocss/vite";
+// .vitepress/theme/index.js
+import DefaultTheme from 'vitepress/theme';
 // https://vitepress.dev/reference/site-config
+//@ts-ignore
 export default defineConfig({
     title: "GraphVisExample",
     description: "A Awesome Graph",
-    outDir: path.join(__dirname, '../dist'),
-    srcDir: path.join(__dirname, "..", "packages"),
+    outDir: path.join(__dirname, "..", 'dist'),
+    srcDir: path.join(__dirname, "..", "docs"),
+    vite: ViteConfig,
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
@@ -14,17 +20,16 @@ export default defineConfig({
             {text: 'Examples', link: '/event'}
         ],
         sidebar: fs
-            .readdirSync('packages')
+            .readdirSync('docs')
             .map((pkg) => {
                 return {
-                    text: 'packages/' + pkg,
+                    text: 'docs/' + pkg,
                     link: pkg
-                }
+                };
             })
         ,
-
         socialLinks: [
             {icon: 'github', link: 'https://github.com/vuejs/vitepress'}
         ]
     }
-})
+});

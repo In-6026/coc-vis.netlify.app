@@ -1,0 +1,14 @@
+0 silly argv {
+0 silly argv   _: [ 'create' ],
+0 silly argv   lernaVersion: '7.1.4',
+0 silly argv   '$0': 'node_modules\\lerna\\dist\\cli.js',
+0 silly argv   name: '@vis/timeline'
+0 silly argv }
+1 notice cli v7.1.4
+2 verbose packageConfigs Package manager "pnpm" detected. Resolving packages using `pnpm-workspace.yaml`.
+3 verbose rootPath C:\Users\NUC\Desktop\自用文件\couriourc-graph-vis.github.io-main
+4 error TypeError: packageConfigs.some is not a function
+4 error     at getGlobOpts (C:\Users\NUC\Desktop\自用文件\couriourc-graph-vis.github.io-main\node_modules\.pnpm\@lerna+create@7.1.4\node_modules\@lerna\create\dist\command.js:615:22)
+4 error     at makeFileFinder (C:\Users\NUC\Desktop\自用文件\couriourc-graph-vis.github.io-main\node_modules\.pnpm\@lerna+create@7.1.4\node_modules\@lerna\create\dist\command.js:631:20)
+4 error     at Project.get fileFinder [as fileFinder] (C:\Users\NUC\Desktop\自用文件\couriourc-graph-vis.github.io-main\node_modules\.pnpm\@lerna+create@7.1.4\node_modules\@lerna\create\dist\command.js:758:24)
+4 error     at Project.getPackages (C:\Users\NUC\Desktop\自用文件\couriourc-graph-vis.github.io-main\node_modules\.pnpm\@lerna+create@7.1.4\node_modules\@lerna\create\dist\command.js:771:21)
