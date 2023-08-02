@@ -12,12 +12,13 @@ export default defineConfig({
     description: "A Awesome Graph",
     outDir: path.join(__dirname, "..", 'dist'),
     srcDir: path.join(__dirname, "..", "docs"),
+    //@ts-ignore
     vite: ViteConfig,
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             {text: 'Home', link: '/'},
-            {text: 'Examples', link: '/event'}
+            {text: 'Start', link: '/get_start'}
         ],
         sidebar: fs
             .readdirSync('docs')
