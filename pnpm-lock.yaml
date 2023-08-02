@@ -9,6 +9,7 @@ importers:
       '@types/d3': ^7.4.0
       '@types/node': ^20.4.2
       '@unocss/vite': ^0.53.5
+      '@vis/org': workspace:^0.0.0
       '@vis/timeline': workspace:^0.0.0
       '@vis/utils': workspace:^0.0.0
       axios: ^1.4.0
@@ -27,6 +28,7 @@ importers:
       vue: ^3.3.4
     dependencies:
       '@svgdotjs/svg.js': 3.2.0
+      '@vis/org': link:packages/org
       '@vis/timeline': link:packages/timeline
       '@vis/utils': link:packages/utils
       axios: 1.4.0
@@ -49,10 +51,10 @@ importers:
       typescript: 5.1.6
       vitepress: 1.0.0-beta.5_abi2gw4k4wrsiad6mr4uz3f3xm
 
-  packages/time-line:
+  packages/timeline:
     specifiers: {}
 
-  packages/timeline:
+  packages/utils:
     specifiers: {}
 
 packages:

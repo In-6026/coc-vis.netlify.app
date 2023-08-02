@@ -18,7 +18,7 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             {text: 'Home', link: '/'},
-            {text: 'Start', link: '/get_start'}
+            {text: 'Start', link: '/org'}
         ],
         sidebar: fs
             .readdirSync('docs')

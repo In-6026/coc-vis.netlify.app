@@ -28,6 +28,7 @@
   ],
   "dependencies": {
     "@svgdotjs/svg.js": "^3.2.0",
+    "@vis/org": "workspace:^0.0.0",
     "@vis/timeline": "workspace:^0.0.0",
     "@vis/utils": "workspace:^0.0.0",
     "axios": "^1.4.0",
