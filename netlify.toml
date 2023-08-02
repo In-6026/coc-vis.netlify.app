@@ -17,5 +17,5 @@ base = "."
 publish = "dist/"
 
 # Default build command.
-command = "npm i -g pnpm && pnpm i &&pnpm docs:build"
+command = ""
 
