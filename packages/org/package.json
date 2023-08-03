@@ -5,20 +5,19 @@
   "author": "couriourc <3234853521@qq.com>",
   "homepage": "https://github.com/couriourc/couriourc-graph-vis.github.io#readme",
   "license": "ISC",
-  "main": "index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "directories": {
     "lib": "lib",
     "dist": "dist",
     "test": "__tests__"
   },
-  "exports": {
-    ".": "./dist/index.js"
-  },
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
@@ -26,13 +25,15 @@
   },
   "scripts": {
     "test": "node ./__tests__/@vis/org.test.js",
-    "build": "couriourc-graph-vis"
+    "dev": "cross-env NODE_ENV=development couriourc-graph-vis build",
+    "build": "cross-env NODE_ENV=production couriourc-graph-vis build"
   },
   "bugs": {
     "url": "https://github.com/couriourc/couriourc-graph-vis.github.io/issues"
   },
   "dependencies": {
     "@vis/cli": "workspace:^0.0.0",
-    "tween": "^0.9.0"
+    "tween": "^0.9.0",
+    "vue-template-compiler": "^2.7.14"
   }
 }

@@ -2,13 +2,12 @@
   "name": "@vis/cli",
   "version": "0.0.0",
   "description": "> TODO: description",
-  "author": "陈 润 <godakid@outlook.com>",
+  "author": " 陈 润 <godakid@outlook.com>",
   "homepage": "https://github.com/couriourc/couriourc-graph-vis.github.io#readme",
   "license": "ISC",
-  "main": "lib/cli.js",
   "type": "commonjs",
   "bin": {
-    "couriourc-graph-vis": "lib/cli.js"
+    "couriourc-graph-vis": "lib/commander.js"
   },
   "directories": {
     "lib": "lib",
@@ -37,8 +36,11 @@
     "@rollup/plugin-image": "^3.0.2",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@vue/compiler-sfc": "^3.3.4",
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
     "generate-source-map": "^0.0.5",
     "lodash": "^4.17.21",
+    "ora": "^7.0.1",
     "postcss": "^8.4.27",
     "read-pkg": "^8.0.0",
     "rollup": "^3.27.0",

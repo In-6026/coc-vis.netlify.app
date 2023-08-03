@@ -5,7 +5,5 @@
 ## Usage
 
 ```
-const org = require('@vis/org');
 
-// TODO: DEMONSTRATE API
 ```

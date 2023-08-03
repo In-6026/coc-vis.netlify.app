@@ -1,8 +1,8 @@
-import Org from './lib/org.vue';
-import {App} from 'vue';
+import Org from './lib/index.vue';
 
-export function install(app) {
-    app.component('Org', Org);
-}
+console.log(Org);
+Org.install = function (app, componentName) {
+    app.component(componentName ?? 'Org', Org);
+};
 
 export default Org;

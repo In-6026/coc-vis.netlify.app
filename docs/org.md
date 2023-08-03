@@ -1,5 +1,5 @@
 ---
-title: "组织结构图"
+title: " 组织结构图 "
 editLink: true'
 head:
 - - meta
@@ -9,10 +9,5 @@ head:
   - name: keywords
     content: org
 ---
-<script lang="ts" setup>
-    import Timeline from '@vis/timeline';
-    import Org from '@vis/org';
-</script>
 # {{$frontmatter.title}}
-
 <Org></Org>

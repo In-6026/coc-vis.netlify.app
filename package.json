@@ -16,6 +16,7 @@
     "@types/d3": "^7.4.0",
     "@types/node": "^20.4.2",
     "@vis/cli": "workspace:^0.0.0",
+    "cross-env": "^7.0.3",
     "jquery": "^3.7.0",
     "lerna": "^7.1.4",
     "less": "^4.1.3",

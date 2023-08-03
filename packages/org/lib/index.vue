@@ -1,7 +1,6 @@
 <script setup>
 import {onMounted} from 'vue';
 import * as d3 from 'd3';
-import TWEEN from 'tween';
 import {createUUID} from 'search-insights/lib/utils/uuid';
 
 let data = {
@@ -107,13 +106,7 @@ let data = {
   ],
 };
 
-function runAnimate() {
-  TWEEN.update();
-  requestAnimationFrame(runAnimate);
-}
-
 onMounted(() => {
-  runAnimate();
 
 // 股权树
   class StockTree {
