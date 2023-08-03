@@ -1,6 +1,8 @@
 <script setup>
 import {onMounted} from 'vue';
 import * as d3 from 'd3';
+import TWEEN from 'tween';
+import {createUUID} from 'search-insights/lib/utils/uuid';
 
 let data = {
   id: 'abc1005',
@@ -103,13 +105,25 @@ let data = {
       ],
     },
     {
-      id: 'abc2002',
-      name: ' 吴小远 ',
+      id: "u0EKSh",
+      name:  "Pink",
+      percent: '40%',
+    },
+    {
+      id: "ic6f1j",
+      name: 'Ancient',
       percent: '40%',
     },
   ],
 };
+
+function runAnimate() {
+  TWEEN.update();
+  requestAnimationFrame(runAnimate);
+}
+
 onMounted(() => {
+  runAnimate();
 
 // 股权树
   class StockTree {
@@ -265,6 +279,8 @@ onMounted(() => {
       });
     }
 
+    memo = new Map();
+
     // 更新数据
     update(source) {
       if (!source) {
@@ -349,7 +365,7 @@ onMounted(() => {
             return '#FFFFFF';
           })
           .on('click', (e, d) => {
-            this.nodeClickEvent(e, d);
+            this.nodeClickEvent.bind(this)(e, d);
           });
       // 文本主标题
       node1Enter
@@ -482,6 +498,21 @@ onMounted(() => {
           .enter()
           .append('path')
           .attr('class', 'linkOfDownItem')
+          .attr('id', (d) => {
+            let id = createUUID();
+            const sId = d.source.data.id;
+            if (this.memo.has(sId)) {
+              this.memo.set(sId, {
+                ...this.memo.get(sId),
+                linkOfDownItem: id,
+              });
+            } else {
+              this.memo.set(sId, {
+                linkOfDownItem: id,
+              });
+            }
+            return id;
+          })
           .attr('d', (d) => {
             let o = {
               source: {
@@ -739,6 +770,22 @@ onMounted(() => {
           .enter()
           .append('path')
           .attr('class', 'linkOfUpItem')
+          .attr('id', (d) => {
+            let id = createUUID();
+            const sId = d.source.data.id;
+
+            if (this.memo.has(sId)) {
+              this.memo.set(sId, {
+                ...this.memo.get(sId),
+                linkOfUpItem: id,
+              });
+            } else {
+              this.memo.set(sId, {
+                linkOfUpItem: id,
+              });
+            }
+            return id;
+          })
           .attr('d', (d) => {
             let o = {
               source: {
@@ -750,6 +797,8 @@ onMounted(() => {
                 y: source.y0,
               },
             };
+            // 为每一个节点存储一下路径
+
             return this.drawLink(o);
           })
           .attr('fill', 'none')
@@ -842,7 +891,9 @@ onMounted(() => {
     originTreeData: data,
     // 节点点击事件
     nodeClickEvent: function (e, d) {
-      console.log(' 当前节点的数据：', d);
+      // 遍历子节点绘制流水线
+      const memo = this.memo;
+      console.log(d.data.id, memo.get(d.data.id));
     },
   });
 });
@@ -853,10 +904,10 @@ onMounted(() => {
 <style>
 
 #org {
-  width: 1600px;
-  height: 800px;
+  min-width: 800px;
+  width: 100%;
+  height: 900px;
   overflow: hidden;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   background-color: #ffffff;
   border-radius: 8px;

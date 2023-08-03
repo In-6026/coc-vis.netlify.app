@@ -25,5 +25,8 @@
   },
   "bugs": {
     "url": "https://github.com/couriourc/couriourc-graph-vis.github.io/issues"
+  },
+  "dependencies": {
+    "tween": "^0.9.0"
   }
 }
