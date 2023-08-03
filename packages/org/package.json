@@ -9,8 +9,7 @@
   "module": "dist/index.mjs",
   "directories": {
     "lib": "lib",
-    "dist": "dist",
-    "test": "__tests__"
+    "dist": "dist"
   },
   "files": [
     "dist"

@@ -9,7 +9,9 @@
   "scripts": {
     "docs:dev": " vitepress dev",
     "docs:build": " vitepress build",
-    "docs:preview": " vitepress preview"
+    "docs:preview": " vitepress preview",
+    "dev": "cross-env NODE_ENV=development pnpm --filter @vis/* dev",
+    "build": "cross-env NODE_ENV=development pnpm --filter @vis/* build"
   },
   "devDependencies": {
     "@algolia/client-search": "^4.19.1",
