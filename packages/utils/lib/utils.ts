@@ -1,5 +1,7 @@
 // 计算文本宽度
 
+import * as d3 from "d3";
+
 export const getTextBox = (
     text: string,
     fontWeight = 'normal',

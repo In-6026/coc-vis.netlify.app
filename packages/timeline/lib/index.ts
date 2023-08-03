@@ -1,4 +1,5 @@
 import * as d3 from "d3";
+import {_d3} from '@vis/utils';
 
 class FishBone<TimelineData> {
     private originTreeData: TimelineData;
@@ -72,7 +73,7 @@ class FishBone<TimelineData> {
         svg.call(
             d3
                 .zoom()
-                .scaleExtent([0.2, 5])
+                .scaleExtent([0.5, 5])
                 .on('zoom', (e) => {
                     gAll.attr('transform', () => {
                         return `translate(${e.transform.x},${e.transform.y}) scale(${e.transform.k})`;
@@ -111,10 +112,33 @@ class FishBone<TimelineData> {
             .append('path')
             .attr('d', 'M0,-5L10,0L0,5') // 箭头的路径
             .attr('fill', '#215af3'); // 箭头颜色
+        // 背景板
 
+        // 外层的矩形框
+        const bg = (kit) => kit
+            .append('rect')
+            .attr('rx', 5)
+            .attr('stroke-width', 1)
+            .on('click', (e, d) => {
+                this.nodeClickEvent.bind(this)(e, d);
+            });
+
+        //  放置刻度尺
+
+        const dashLine = (kit) => _d3(kit)
+            .attr('stroke-dasharray', '5,5')
+            .attr('stroke-width', 1)
+            .width("12")
+            .append('g')
+            .attr('transform',)
+        ;
+        dashLine(bg(gAll));
+        gAll.append("rect").attr("x", 0).attr("y", 0).attr("width", 12).attr("height", 14);
+        host.append(() => svg.node());
     }
 
     drawChart() {
+
 
     }
 }

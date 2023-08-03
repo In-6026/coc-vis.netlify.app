@@ -104,16 +104,6 @@ let data = {
         },
       ],
     },
-    {
-      id: "u0EKSh",
-      name:  "Pink",
-      percent: '40%',
-    },
-    {
-      id: "ic6f1j",
-      name: 'Ancient',
-      percent: '40%',
-    },
   ],
 };
 

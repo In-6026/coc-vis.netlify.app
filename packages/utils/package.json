@@ -1,18 +1,14 @@
 {
-  "name": "@vis/org",
+  "name": "@vis/utils",
   "version": "0.0.0",
   "description": "> TODO: description",
-  "author": "couriourc <3234853521@qq.com>",
+  "author": "陈 润 <godakid@outlook.com>",
   "homepage": "https://github.com/couriourc/couriourc-graph-vis.github.io#readme",
   "license": "ISC",
-  "main": "index.js",
+  "main": "index.ts",
   "directories": {
     "lib": "lib",
-    "dist": "dist",
     "test": "__tests__"
-  },
-  "exports": {
-    ".": "./dist/index.js"
   },
   "files": [
     "lib"
@@ -25,14 +21,9 @@
     "url": "git+https://github.com/couriourc/couriourc-graph-vis.github.io.git"
   },
   "scripts": {
-    "test": "node ./__tests__/@vis/org.test.js",
-    "build": "couriourc-graph-vis"
+    "test": "node ./__tests__/@vis/utils.test.js"
   },
   "bugs": {
     "url": "https://github.com/couriourc/couriourc-graph-vis.github.io/issues"
-  },
-  "dependencies": {
-    "@vis/cli": "workspace:^0.0.0",
-    "tween": "^0.9.0"
   }
 }
