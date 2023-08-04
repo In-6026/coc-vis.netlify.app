@@ -5,7 +5,6 @@
   "author": " 陈 润 <godakid@outlook.com>",
   "homepage": "https://github.com/couriourc/couriourc-graph-vis.github.io#readme",
   "license": "ISC",
-  "type": "commonjs",
   "bin": {
     "couriourc-graph-vis": "lib/commander.js"
   },
@@ -31,21 +30,31 @@
   },
   "dependencies": {
     "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
     "@rollup/plugin-alias": "^5.0.0",
     "@rollup/plugin-commonjs": "^25.0.3",
     "@rollup/plugin-image": "^3.0.2",
     "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^11.1.2",
     "@vue/compiler-sfc": "^3.3.4",
+    "acorn": "^8.10.0",
+    "acorn-jsx": "^5.3.2",
+    "babel-preset-vue": "^2.0.2",
+    "build": "^0.1.4",
     "chalk": "^5.3.0",
     "commander": "^11.0.0",
+    "core-js": "^3.32.0",
     "generate-source-map": "^0.0.5",
+    "glob": "^10.3.3",
     "lodash": "^4.17.21",
     "ora": "^7.0.1",
     "postcss": "^8.4.27",
     "read-pkg": "^8.0.0",
     "rollup": "^3.27.0",
+    "rollup-merge-config": "^0.0.12",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
@@ -55,9 +64,10 @@
     "rollup-plugin-typescript2": "^0.35.0",
     "rollup-plugin-url": "^3.0.1",
     "rollup-plugin-vue": "^6.0.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "vue-template-compiler": "^2.7.14"
   },
-  "devDependencies": {
-    "rollup-plugin-livereload": "^2.0.5"
+  "peerDependencies": {
+    "core-js": "^3.32.0"
   }
 }

@@ -1,5 +1,4 @@
 import {defineConfig} from 'vitepress';
-import * as fs from 'fs'; // https://vitepress.dev/reference/site-config
 import * as path from "path";
 // .vitepress/theme/index.js
 // https://vitepress.dev/reference/site-config

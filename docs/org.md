@@ -1,6 +1,5 @@
 ---
 title: " 组织结构图 "
-editLink: true'
 head:
 - - meta
   - name: description

@@ -1,8 +1,8 @@
 <script setup>
 import {onMounted} from 'vue';
-import {createTimeline} from './index';
 
-onMounted(createTimeline);
+onMounted(() => {
+});
 </script>
 <template>
   <div id="fishbone" class=" w-full h-400px"></div>
