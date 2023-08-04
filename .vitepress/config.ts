@@ -1,5 +1,7 @@
 import {defineConfig} from 'vitepress';
 import * as path from "path";
+import {loadEnv} from 'vite';
+
 // .vitepress/theme/index.js
 // https://vitepress.dev/reference/site-config
 //@ts-ignore
@@ -9,9 +11,13 @@ export default defineConfig({
     outDir: path.join(__dirname, "..", 'dist'),
     srcDir: path.join(__dirname, "..", "docs"),
     head: [
-        ['link', {rel: 'stylesheet', href: 'https://unpkg.com/tailwindcss@2.0.4/dist/tailwind.min.css'}]
+        ['link', {rel: 'stylesheet', href: 'https://unpkg.com/tailwindcss@2.0.4/dist/tailwind.min.css'}],
+        ['link', {rel: 'stylesheet', href: "https://unpkg.com/gitalk/dist/gitalk.css"}],
     ],
     lastUpdated: true,
+    vite: {
+        envDir: path.resolve(__dirname)
+    },
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
