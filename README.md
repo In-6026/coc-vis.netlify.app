@@ -23,7 +23,7 @@ CoC Vis
     <a href="https://github.com/couriourc/couriourc-graph-vis.github.io"><strong>探索本项目的文档 »</strong></a>
     <br />
     <br />
-    <a href="https://couriourc-vis.netlify.app/">查看Demo</a>
+    <a href="https://coc-vis.netlify.app/">查看Demo</a>
     ·
     <a href="https://github.com/couriourc/couriourc-graph-vis.github.io/issues">报告Bug</a>
     ·
@@ -32,7 +32,7 @@ CoC Vis
 
 </p>
 
-[![CouriourC Vis Deployer](https://github.com/couriourc/couriourc-graph-vis.github.io/actions/workflows/build-deploy.yaml/badge.svg)](https://github.com/couriourc/couriourc-graph-vis.github.io/actions/workflows/build-deploy.yaml)
+[![CouriourC Vis Deployer](https://github.com/couriourc/coc-vis.netlify.app/actions/workflows/build-deploy.yaml/badge.svg)](https://github.com/couriourc/coc-vis.netlify.app/actions/workflows/build-deploy.yaml)  [![Netlify Status](https://api.netlify.com/api/v1/badges/ae74c0a2-9fdb-4ba6-aaf0-fa60d110ebcc/deploy-status)](https://app.netlify.com/sites/coc-vis/deploys)
 
  本篇README.md面向开发者
  
@@ -53,6 +53,8 @@ CoC Vis
 
 ### 上手指南
 
+#### Quick Deploy
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/couriourc/coc-vis.netlify.app)
 
 
 ###### 开发前的配置要求
@@ -64,8 +66,10 @@ CoC Vis
 1. Clone the repo
 
 ```sh
-git clone https://github.com/couriourc/couriourc-graph-vis.github.io.git
+git clone https://github.com/couriourc/coc-vis.github.io.git
 ```
+
+
 
 ### 文件目录说明
 
