@@ -1,6 +1,5 @@
 import {defineConfig} from 'vitepress';
 import * as path from "path";
-import {loadEnv} from 'vite';
 
 // .vitepress/theme/index.js
 // https://vitepress.dev/reference/site-config

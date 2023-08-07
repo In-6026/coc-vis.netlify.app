@@ -31,6 +31,7 @@
     "url": "https://github.com/couriourc/couriourc-graph-vis.github.io/issues"
   },
   "dependencies": {
+    "@antv/g6": "^4.8.21",
     "@vis/cli": "workspace:^0.0.0"
   }
 }
